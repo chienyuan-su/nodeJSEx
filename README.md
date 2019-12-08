@@ -37,6 +37,36 @@ E. 瀏覽器對服務器傳資料時，就算封包被攔也解不開。
 
 
 ##### [2019-12-08] #####
-#### HTTP 傳輸協定 ####
+#### HTTP 傳輸協定 (單工, 只有 Client 向 Server 要求處理或解答)####
 
+請求的封包長相 :
+
+(網路截圖)
+![image](https://github.com/chienyuan-su/nodeJSEx/blob/master/images/httpRequest.png)
+
+A. 請求方法 (Method)
+  
+  a. OPTIONS : 沒用到（有興趣可以再研究）
+
+  b. GET : 很常見, body 不能裝載東西, 想給 server 的東西需要放在 header 裡, 好處是快速, 不用打開 body 來看 
+
+  c. HEAD : 判斷資料在不在很好用, 不用真的去把資料抓下來, 有時候資料真的很大, 用這 method 可以秒回 (4.0 code push 有用到)
+
+  d. POST : 我們都用這個, 可以取代 Get, Put, delete, 用來通知 server 做任何事, 資料可以放在 body 裡
+
+  e. PUT : 沒用到（有興趣可以再研究)
+
+  f. DELETE : 沒用到（有興趣可以再研究)
+
+  g. TRACE : 沒用到（有興趣可以再研究)
+
+  h. CONNECT : 沒用到（有興趣可以再研究)
+  
+B. URL : 請求的目標 api, 如果是 Get 會一起把參數都填成 queryString
+
+C. 協議（Http）版本 : 0.9 / 1.0 / 1.1
+
+D. Header : 有很多既定的, 也可以自訂, 列舉幾個重要的
+
+E. body : 訊息本體
 
