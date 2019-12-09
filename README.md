@@ -46,27 +46,37 @@ E. 瀏覽器對服務器傳資料時，就算封包被攔也解不開。
 
 A. 請求方法 (Method)
   
-  a. OPTIONS : 沒用到（有興趣可以再研究）
+  - a. OPTIONS : 沒用到（有興趣可以再研究）
 
-  b. GET : 很常見, body 不能裝載東西, 想給 server 的東西需要放在 header 裡, 好處是快速, 不用打開 body 來看 
+  - b. GET : 很常見, body 不能裝載東西, 想給 server 的東西需要放在 header 裡, 好處是快速, 不用打開 body 來看 
 
-  c. HEAD : 判斷資料在不在很好用, 不用真的去把資料抓下來, 有時候資料真的很大, 用這 method 可以秒回 (4.0 code push 有用到)
+  - c. HEAD : 判斷資料在不在很好用, 不用真的去把資料抓下來, 有時候資料真的很大, 用這 method 可以秒回 (4.0 code push 有用到)
 
-  d. POST : 我們都用這個, 可以取代 Get, Put, delete, 用來通知 server 做任何事, 資料可以放在 body 裡
+  - d. POST : 我們都用這個, 可以取代 Get, Put, delete, 用來通知 server 做任何事, 資料可以放在 body 裡
 
-  e. PUT : 沒用到（有興趣可以再研究)
+  - e. PUT : 沒用到（有興趣可以再研究)
 
-  f. DELETE : 沒用到（有興趣可以再研究)
+  - f. DELETE : 沒用到（有興趣可以再研究)
 
-  g. TRACE : 沒用到（有興趣可以再研究)
+  - g. TRACE : 沒用到（有興趣可以再研究)
 
-  h. CONNECT : 沒用到（有興趣可以再研究)
+  - h. CONNECT : 沒用到（有興趣可以再研究)
   
 B. URL : 請求的目標 api, 如果是 Get 會一起把參數都填成 queryString
 
 C. 協議（Http）版本 : 0.9 / 1.0 / 1.1
 
 D. Header : 有很多既定的, 也可以自訂, 列舉幾個重要的
+
+  - a. Accept 系列, 告訴 server 自己能接受的ＯＯ格式 (Accept：内容类型 content-type, Accept-Charset,...)
+  
+  - b. Cookie : server 設定下來, 訪問時放在 Header 還回去
+  
+  - c. Content-Length : body 的長度, 以 byte 算(可用 string length 想像)
+  
+  - d. Content-Type (重要): body 的 MIME(Multipurpose Internet Mail Extensions 多用途網際網路郵件擴展)類型,
+  
+      * d.1. 一個MIME類型包括一個類型（type），一個子類型（subtype）
 
 E. body : 訊息本體
 
