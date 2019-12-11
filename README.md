@@ -82,3 +82,8 @@ D. Header : 有很多既定的, 也可以自訂, 列舉幾個重要的
 
 E. body : 訊息本體
 
+
+回應的封包長相
+
+（網路截圖）
+![image](https://github.com/chienyuan-su/nodeJSEx/blob/master/images/httpResponse.png)
