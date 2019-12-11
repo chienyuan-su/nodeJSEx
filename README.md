@@ -68,15 +68,17 @@ C. 協議（Http）版本 : 0.9 / 1.0 / 1.1
 
 D. Header : 有很多既定的, 也可以自訂, 列舉幾個重要的
 
-  - a. Accept 系列, 告訴 server 自己能接受的ＯＯ格式 (Accept：内容类型 content-type, Accept-Charset,...)
+  - a. Accept 系列, 告訴 server 自己能接受的某某格式 (Accept：内容类型 content-type, Accept-Charset,...)
   
-  - b. Cookie : server 設定下來, 訪問時放在 Header 還回去
+  - b. Cookie : server 設定, 訪問時放在 Header 還回去
   
   - c. Content-Length : body 的長度, 以 byte 算(可用 string length 想像)
   
   - d. Content-Type (重要): body 的 MIME(Multipurpose Internet Mail Extensions 多用途網際網路郵件擴展)類型,
   
       * d.1. 一個MIME類型包括一個類型（type），一個子類型（subtype）
+      * d.2. 我們用到的 : application/json, application/x-www-form-urlencoded
+      * d.3. 其他常見 : text/plain(純文字), text/xml
 
 E. body : 訊息本體
 
